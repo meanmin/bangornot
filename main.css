@@ -1,0 +1,42 @@
+#main {
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#start {
+    width: 80%;
+    text-align: center;
+}
+
+/*
+.howtoplay {
+    background-color: white;
+    border-radius: 20px;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: rgb(138, 154, 238);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.19rem;
+}
+*/
+
+.contain {
+    height: 20px;
+    width: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.btn {
+    width: 50%;
+    height: auto;
+    font-size: 1.75rem;
+    border-radius: 100px;
+    background-color: rgb(255, 10, 172);
+    font-family: 'Workbench', sans-serif;
+    color: rgb(255, 255, 255);
+}

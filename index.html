@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cochl">
+    <meta name="keyword" content="Bang or not">
+    <meta name="description" content="Bang or not">
+
+    <!-- sns share -->
+    <meta property="og:url" content="https://bangornot.netlify.app"> 주소 변경이 필요함 
+    <meta property="og:title" content="Bang or not">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/main.png">
+    <meta property="og:description" content="Test your ears and see you can be alive or not.">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+
+    <!-- 파비콘-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <link rel="apple-touch-icon-precomposed" href="img/fav.png">
+
+
+    <title>Bang or not</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- css 연결해볼게 -->
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/qna.css">
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/result.css">
+    
+
+    <!-- 카카오 연결해볼게 -->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.6.0/kakao.min.js"
+    integrity="sha384-6MFdIr0zOira1CHQkedUqJVql0YtcZA1P0nbPrQYJXVJZUkTk/oX4U9GhUIs3/z8" crossorigin="anonymous"></script>
+    <script>
+    Kakao.init('ad130558a7f86fd3415be72d7e2d9091'); // 사용하려는 앱의 JavaScript 키 입력
+    </script>
+
+    <!-- meta -->
+    <meta property="og:url" content="https://bangornot.netlify.app">
+    <meta property="og:title" content="Bang or not">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/main.png">
+    <meta property="og:description" content="Guess the gunshot!">
+  
+    
+
+    <!--폰트 삽입해볼게-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Open+Sans&family=Source+Code+Pro:ital,wght@0,200;1,200&family=Ubuntu&family=Workbench&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div style="text-align:center">
+        <a href="https://cochl.ai">
+            <img class="contain" src="img/logo_mix.png"></a>
+    </div>
+
+    <div class="container">
+        <section id="main" class="mx-auto my-5 px-3 py-5">
+            <h1> <span
+                    style="font-family: 'Workbench', sans-seif !important; font-size: 1.2rem; color: whitesmoke;"> Ready to guess the gunshot?</span>
+            </h1>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-12 mx-auto my-5">
+                <img src="./img/main.gif" class="img-fluid" alt="mainImage">
+            </div>
+            <!--
+            <div class="howtoplay">
+                Do you think you can distinguish a gunshot from many other sounds? <br>
+                Listen to the sound and try to identify the bang among similar ones. <br>
+                If you miss more than one, whoa! Be carefull!
+            </div>
+            -->
+            <button type="button" class="btn mt-5" onclick="js:begin()"> > Reload</button>
+        </section>
+
+        <!--문제 출제-->
+
+        <section id="qna">
+            <div class="status mx-auto my-5">
+                <div class="statusBar">
+
+                </div>
+            </div>
+
+            <div class="qBox my-3 py-3 mx-auto">
+
+            </div>
+            <div class="audioBox my-3 py-3 mx-auto">
+                <button type="button" class="audio mt-3 py-2 px-3">&#127911;</button>
+            </div>
+
+            <div class="answerBox">
+
+            </div>
+        </section>
+        
+
+        <!--결과 출제-->
+
+        <section id="result" class="mx-auto my-5 py-5 px-3">
+            <h2>Check your result!</h2>
+            <br>
+            👇👇👇👇
+            <br>
+
+            <div class="upper my-5 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+                <div class="resultname my-3"
+                    style="border-top: 2px solid rgb(138, 154, 238) ; border-bottom: 2px solid rgb(138, 154, 238) ;">
+
+                </div>
+
+                <div id="resultImg" class="my-5 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+                </div>
+            </div>
+
+            <div class="bottom my-5 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+                <div class="resultDesc my-3">
+
+                </div>
+            </div>
+
+            <button type="button" class="kakao mt-3 py-2 px-3" onclick="js:setShare()">Share the result</button> -> 여기에 각종 sns 붙여야해
+            <button type="button" class="official mt-3 py-2 px-3"
+                onclick="window.open('https://forms.gle/jrzQkcKau23XhPHaA')">Cochl이랑 Coffee Chat하기</button>
+        </section>
+        <script src="./js/data.js" charset="utf-8"></script>
+        <script src="./js/start.js" charset="utf-8"></script>
+        <script src="./js/share.js" charset="utf-8"></script>
+    </div>
+</body>
+
+</html>
+
+<!--
+<h2>object-fit: contain</h2>
+<img class="contain" 
+src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
+
+<img class="contain narrow"
+src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo">
